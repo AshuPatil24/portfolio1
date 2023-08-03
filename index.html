@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Personal Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/8776bb8466.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+<div id="header">
+<div class="container">
+    <nav>
+        <img src="Images\logo1new.jpg" class="logo">
+        <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+<div class="header-text">
+<p>Web Developer/Software Developer</p>
+<h1>Hii, I'm<span> Ashwini</span><br>Patil From Pune</h1>
+</div>
+</div>
+</div>
+
+<!-----------------------------About------------------------------>
+
+
+<div id="about">
+<div class="container">
+<div class="row">
+<div class="about-col-1">
+<img src="Images\ashu.png.jpg">
+</div>
+<div class="about-col-2">
+<h1 class="sub-title">About Me</h1>
+<p>An active learner, Experience in building few frontend web development projects.
+Currently learning Python for Backend Development.
+Looking for internship or full time opportunity in Web Development and Software Development Role.</p>
+
+<div class="tab-titles">
+<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+<p class="tab-links" onclick="opentab('education')">Education</p>
+</div>
+<div class="tab-contents active-tab" id="skills">
+<ul>
+<li><span>Frontend Development </span><br>Html,Css,Js</li>
+<li><span>software Development </span><br> C,Cpp,Python,Php</li>
+</ul>
+</div>
+<div class="tab-contents" id="education">
+<ul>
+<li><span>2022-2024</span><br>MCA from Pune.</li>
+<li><span>2019-2022</span><br>BCA form Jalgaon.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!--------------portfolio------------------>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Images\work2.jpg">
+                <div class="layer">
+                    <h3><b>E-Commerce Website</h3></b>
+<p>As the order is placed, the customer's 
+    web browser will communicate back and forth 
+    with the server hosting the e-commerce website.</p>
+        <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images\cake2new1.1.1.jpg">
+                <div class="layer">
+                    <h3><b>Cake Shop Management System</h3></b>
+<p>Bakery Management System is totally computer
+     based software application to maintain
+      day to day transactions in a bakery.</p>
+        <a href="#"><i class="fa-solid fa-cake-candles"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images\tem5.jfif">
+                <div class="layer">
+                    <h3><b>Temperature Converter</h3></b>
+<p>A temperature converter helps convert the
+     temperature between Fahrenheit and Celsius scale.</p>
+        <a href="#"><i class="fa-solid fa-temperature-three-quarters"></i></a>
+                </div>
+            </div> 
+            <div class="work">
+                <img src="Images\netflix4.jpg">
+                <div class="layer">
+                    <h3><b>Homepage Of Netflix</h3></b>
+<p>At Netflix, we want to entertain the world.
+     Whatever your taste, and no matter where you live,
+      we give you access to best-in-class 
+      TV series, documentaries, feature films and mobile games.</p>
+        <a href="#"><i class="fa-solid fa-tv"></i></a>
+                </div>
+            </div> 
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+
+<!-------------------------------contact------------------------------>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+<div class="contact-left">
+<h1 class="sub-title">Contact Me</h1>
+<p><i class="fa-regular fa-envelope"></i>patilmau2001@gmail.com</p>
+<p><i class="fa-solid fa-phone"></i>7709865520</p>
+<div class ="social-icons">
+<a href=""><i class="fa-brands fa-instagram"></i></a>
+<a href=""><i class="fa-brands fa-linkedin"></i></a>
+<a href=""><i class="fa-brands fa-github"></i></a>
+</div>
+<a href="PDF\Ashu CV.pdf" download class="btn btn2">Download CV</a>
+</div>
+<div class="contact-right">
+    <form name="submit-to-google-sheet">
+        <input type=" text" name="Name" placeholder="Your Name"required>
+        <input type="email" name="Email" placeholder="Your Email"required>
+        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+        <button type="Submit" class="btn btn2">Submit</button>
+    </form>
+    <span id="msg"></span>
+
+</div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p><i class="fa-regular fa-copyright"></i>   copyright @ Ashu!!!</p>
+    </div>
+</div>
+
+
+
+<script>
+var tablinks=document.getElementsByClassName("tab-links");
+var tabcontents=document.getElementsByClassName("tab-contents");
+
+function opentab(tabname)
+{
+	for(tablink of tablinks)
+	{
+		tablink.classList.remove("active-link");
+	}
+	for(tabcontent of tabcontents)
+	{
+		tabcontent.classList.remove("active-tab");
+	}
+	event.currentTarget.classList.add("active-link");
+	document.getElementById(tabname).classList.add("active-tab");
+}
+
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyrv_Azb96S47Q8T194TyGTxLrgtHHit_DBkBnBMFs-AzAFwSd1YV3D9v5gl5FS00YX/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message Send Successfully!!"
+            setTimeout(function()
+            {
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+
+</html>
